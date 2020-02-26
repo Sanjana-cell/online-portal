@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Instractor.master.cs" Inherits="Instractor" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                   SriRam Tutorials ~ Online Study Center 
+                </h1>
+                       <div class="loginDisplay">
+            Welcome :<asp:Label ID="dispname" runat="server" Text=""></asp:Label>
+               
+               
+               
+                <asp:Button ID="logout" runat="server" Text="Logout" onclick="logout_Click" 
+                   CausesValidation="False" BackColor="#FFCCFF" BorderStyle="Outset" ForeColor="Black" />
+
+            </div>
+
+               
+            </div>
+            
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    BackColor="#669999">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/ViewAssignedCourses.aspx" Text="View Assigned Courses"/>
+                        <asp:MenuItem NavigateUrl="~/UploadVideos.aspx" Text="Upload Videos"/>
+                        <asp:MenuItem NavigateUrl="~/UploadPDF.aspx" Text="Upload PDF"/>
+                        <asp:MenuItem NavigateUrl="~/PrepareTest.aspx" Text="Prepare Test"/>
+                        <asp:MenuItem NavigateUrl="~/ViewUploadedVideos.aspx" Text="View Uploaded Videos"/>
+                        <asp:MenuItem NavigateUrl="~/ChangePasswordInstractor.aspx" Text="Change-Password"/>
+                        
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

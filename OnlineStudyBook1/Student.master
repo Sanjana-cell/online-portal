@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Student.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                  SriRam Tutorials ~ Online Study Center 
+                </h1>
+                       <div class="loginDisplay">
+            Welcome :<asp:Label ID="dispname" runat="server" Text=""></asp:Label>
+               
+               
+               
+                <asp:Button ID="logout" runat="server" Text="Logout" onclick="logout_Click" 
+                   CausesValidation="False" />
+
+            </div>
+
+               
+            </div>
+            
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                         <asp:MenuItem NavigateUrl="~/StudentIntraduction.aspx" Text="Intraduction"/>
+                        <asp:MenuItem NavigateUrl="~/DisplayAvailableCourse.aspx" Text="Courses-List"/>
+                        <asp:MenuItem NavigateUrl="~/StudyMatirials.aspx" Text="Study-Matirials"/>
+                        <asp:MenuItem NavigateUrl="~/OnlineTestForStudent.aspx" Text="Online Test"/>
+                        <asp:MenuItem NavigateUrl="~/FeedBack.aspx" Text="Feedback"/>
+                        <asp:MenuItem NavigateUrl="~/ChangePassword1.aspx" Text="Change-Password"/>
+                        <asp:MenuItem NavigateUrl="~/ContactUSUser.aspx" Text="Contact-US"/>
+                        
+
+                    
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
